@@ -7,6 +7,6 @@ yum list installed | grep -v "Installed Packages" | cut -f 1 -d " " | cut -f 1 -
 cp installed.trimmed installed.reduced
 cat /tmp/installed.list | while read PACKAGE ; do
 	echo removing ${PACKAGE}
-	sed -i "/^${PACKAGE}\$/d" /tmp/installed.reduced
+	sed -i "/^${PACKAGE}\$/d" installed.reduced
 done
 -
